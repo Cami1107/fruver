@@ -1,0 +1,234 @@
+/* Estilos de CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Crear variables de color */
+:root{
+    --fondo:rgb(251, 249, 241);
+    --blanco:#ffffff;
+    --negro:#000000;
+    --verde-fruver:#2A6049;
+    --verde-fruver-iluminado: #479E79;
+    --gris-letra:#444444;
+
+
+}
+/* Estilos para header */
+body{
+    background-color: var(--fondo);
+}
+nav{
+    background: var(--fondo);
+    margin-top: 20px;
+    margin-bottom:30px;
+    position: sticky;    
+}
+nav img{
+    height: 23px;
+    width: 23px; 
+    transition: .5s; 
+}
+nav img:hover{
+    transform: scale(.9);
+}
+
+.Ingreso{
+    transition: .5s;
+}
+.Ingreso:hover{
+    transform: scale(.9);
+}
+nav a h2{
+    color: var(--verde-fruver);
+    padding-top: 15px;
+    padding-right: 45px;
+    padding-left:0;    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 750;
+    transition: .8s;
+}
+nav div a h2:hover{
+    transform: scale(.9);
+}
+.collapse-fruver ul li a{
+    color:var(--verde-fruver) !important;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 150;
+    padding-top: 32px;
+    transition: .5s;
+    
+}
+.collapse-fruver ul li a:hover{
+    color:var(--verde-fruver-iluminado) !important;
+    transform: scale(.9);
+}
+nav a{    
+    color:var(--gris-letra) !important;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 150;
+    padding-top: 15px;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+nav a:hover{
+    color: var(--verde-fruver-iluminado) !important;
+}
+/* Estilos del Hero */
+header #hero{
+    position: relative;
+}
+
+header #hero .cont-info h3{
+    background: transparent;
+    position: absolute;
+    color: var(--verde-fruver);
+    z-index: 100;
+    padding-top: 250px;
+    padding-left: 130px;
+    font-size: 25px;
+    font-weight: 550;
+    font-family: 'Anek Latin', sans-serif;   
+}
+header #hero .cont-info h2{
+    background: transparent;
+    position: absolute;    
+    z-index: 100;
+    padding-left: 130px;
+    padding-top: 300px;
+    font-size: 15px;
+    color: #444444;
+    font-family: 'Anek Latin', sans-serif;
+}
+header #hero .cont-info a{
+    z-index: 100;
+    position: absolute;
+    padding-left: 130px;
+    padding-top: 370px;
+    height: 100px;
+    width: 500px;
+    
+        
+}
+header #hero .cont-info button{
+    padding: 5px;
+    font-size: 12px;
+    font-family: 'Anek Latin', sans-serif;
+    background-color: var(--verde-fruver);
+    color: var(--blanco);
+    border-radius: 5px;
+    border-color: var(--verde-fruver);
+    box-shadow: none;    
+}
+
+header #hero .cont-info button:hover{
+    color: yellow;
+}
+
+/* FIN Estilos para header */
+/* comienzo de fomulario de registro */
+.contForm{
+    /* display: flex; */
+    background-image: url(../Multimedia/fondo-registro.jpg);
+    background-size: 50% ;
+    background-repeat: repeat;
+}
+form {
+    font-family: 'Anek Latin', sans-serif;
+    margin-left: 33%;
+    margin-top: 0;
+    width: 35%;
+    border-color: rgb(0, 0, 0) ;
+    /* border-style: dashed; */
+    border-radius: 5%;
+    padding: 30px 30px 0;
+    background: var(--fondo);
+}
+
+main div img{
+    width: 33%;
+}
+main{
+    margin-bottom: 25px;
+}
+
+.btn{
+    background: var(--verde-fruver);
+    border-color: var(--verde-fruver);
+    transition: .5s;
+}
+.btn:hover{
+    background-color: var(--verde-fruver-iluminado);
+    /* border-color: var(--verde-fruver); */
+    transform: scale(.9);
+}
+
+/* inicio footer */
+#contacts {
+    background:var(--fondo);
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif; 
+
+}
+
+footer #contacts{
+    background: var(--verde-fruver);
+}
+/* lista del footer */
+
+footer #contacts ul{
+    margin-top: 30px;
+}
+
+footer #contacts ul h2{
+    color: var(--blanco);
+    font-size: 18px;    
+    font-family: 'Anek Latin', sans-serif;
+    margin-bottom: 25px;    
+}
+
+footer ul li a{
+    text-decoration: none;
+    list-style: none;
+    /* display: flex; */
+    /* width: 33%; */
+    /* color: var(--verde-fruver); */
+    color: var(--blanco);
+    font-size: 12px;    
+    font-family: 'Anek Latin', sans-serif;
+} 
+footer ul li a:hover{
+    color: var(--verde-fruver-iluminado);
+}
+
+/* tamaño de las imagenes */
+footer #contacts .iconosimg{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+
+}
+.iconosimg img{
+    width: 25px;
+    height: 25px;
+}
+footer .iconosimg a{
+    text-decoration: none;
+}
+
+#contacts ul li{
+    text-decoration: none;
+    list-style: none;
+}
+
+#contacts ul{
+    width: 33%;
+    margin-top: 10%;
+    margin-left: 5%;
+}

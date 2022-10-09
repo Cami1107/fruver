@@ -1,0 +1,346 @@
+/* Estilos de CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Crear variables de color */
+:root{
+    --fondo:rgb(251, 249, 241);
+    --blanco:#ffffff;
+    --negro:#000000;
+    --verde-fruver:#2A6049;
+    --verde-fruver-iluminado: #479E79;
+    --verde-fruver-claro: rgb(241, 251, 244);
+    --gris-letra:#444444;
+
+
+}
+/* Estilos para header */
+body{
+    background-color: var(--fondo);
+}
+nav{
+    background: var(--fondo);
+    margin-top: 20px;
+    margin-bottom:30px;
+    position: sticky;    
+}
+nav img{
+    height: 23px;
+    width: 23px;    
+}
+nav a h2{
+    color: var(--verde-fruver);
+    padding-top: 15px;
+    padding-right: 45px;
+    padding-left:0;    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 750;
+}
+.collapse-fruver ul li a{
+    color:var(--verde-fruver) !important;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 150;
+    padding-top: 32px;
+    
+}
+.collapse-fruver ul li a:hover{
+    color:var(--verde-fruver-iluminado) !important;
+}
+nav a{    
+    color:var(--gris-letra) !important;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 150;
+    padding-top: 15px;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+nav a:hover{
+    color: var(--verde-fruver-iluminado) !important;
+}
+/* Estilos del Hero */
+header #hero{
+    position: relative;
+}
+
+header #hero .cont-info h3{
+    background: transparent;
+    position: absolute;
+    color: var(--verde-fruver);
+    z-index: 100;
+    padding-top: 250px;
+    padding-left: 130px;
+    font-size: 25px;
+    font-weight: 550;
+    font-family: 'Anek Latin', sans-serif;   
+}
+header #hero .cont-info h2{
+    background: transparent;
+    position: absolute;    
+    z-index: 100;
+    padding-left: 130px;
+    padding-top: 300px;
+    font-size: 15px;
+    color: #444444;
+    font-family: 'Anek Latin', sans-serif;
+}
+header #hero .cont-info a{
+    z-index: 100;
+    position: absolute;
+    padding-left: 130px;
+    padding-top: 370px;
+    height: 100px;
+    width: 500px;
+    
+        
+}
+header #hero .cont-info button{
+    padding: 5px;
+    font-size: 12px;
+    font-family: 'Anek Latin', sans-serif;
+    background-color: var(--verde-fruver);
+    color: var(--blanco);
+    border-radius: 5px;
+    border-color: none;
+    border: 0; 
+ } 
+
+
+ header #hero .cont-info button:hover{
+    color: var(--blanco);
+    background-color: var(--verde-fruver-iluminado);
+}
+
+
+/* FIN Estilos para header */
+
+/* Estilos para main */
+/* Sección Servicios */
+main{
+    margin-top: 50px;
+    margin-bottom: 120px;
+}
+main #servicios .col-md-6{
+    display: flex;
+    justify-content: space-around;
+    background-color:var(--fondo);
+}
+
+main #servicios h2{
+    color: var(--verde-fruver);
+    font-family: Arial, Helvetica, sans-serif;    
+    font-size: 20px;
+    font-weight: 750;
+    text-align: center;
+    margin-bottom: 35px;
+}
+main .card{
+    background: var(--fondo); 
+    margin: 10px; 
+    text-align: center;  
+}
+
+main .card img{
+    margin-top: 20px;
+    height: 80px;
+    width: 80px;
+    margin-left: 100px;
+    
+}
+main .card-body h3{
+    color: var(--verde-fruver);
+    font-family: Arial, Helvetica, sans-serif;    
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;    
+}
+main .card-body p{
+    font-size: 13px;
+    color: #444444;
+    font-family: 'Anek Latin', sans-serif;
+    
+}
+/* Sección Servicios */
+
+/* Sección Productos */
+main #categorias h2{
+    margin-top: 40px;
+    color: var(--verde-fruver);
+    font-family: Arial, Helvetica, sans-serif;    
+    font-size: 20px;
+    font-weight: 750;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* cartas producto */
+main .prod{
+    background: #ffffff; 
+    margin: 10px; 
+    text-align: center;  
+}
+main #categorias .col-md-6{
+    display: flex;
+    justify-content: space-around;    
+}
+
+
+main .prod img{
+    margin-top: 20px;
+    height: 80px;
+    width: 80px;
+    margin-left: 100px;
+    
+}
+.btn-primary{
+    text-decoration: none;
+    background-color: var(--verde-fruver);
+    border-color: var(--verde-fruver) ;
+
+}
+
+.btn-primary:hover{
+    text-decoration: none;
+    background-color: var(--verde-fruver-iluminado);
+    border-color: var(--verde-fruver-iluminado) ;
+}
+
+main .card-link{
+text-decoration: none;
+}
+
+#frutas{
+    color: var(--verde-fruver);
+    font-family: Arial, Helvetica, sans-serif;    
+    font-size: 20px;
+    font-weight: 750;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#verduras{
+    color: var(--verde-fruver);
+    font-family: Arial, Helvetica, sans-serif;    
+    font-size: 20px;
+    font-weight: 750;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#frutas .card-info{
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+}
+#frutas .card-infog{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 10px;
+    color: #6c6c6c;
+}
+/* boton flotante */
+.btn-flotante {
+    font-size: 16px; /* Cambiar el tamaño de la tipografia */
+    text-transform: uppercase; /* Texto en mayusculas */
+    font-weight: bold; /* Fuente en negrita o bold */
+    color: #ffffff; /* Color del texto */
+    border-radius: 5px; /* Borde del boton */
+    letter-spacing: 2px; /* Espacio entre letras */
+    background-color: var(--verde-fruver); /* Color de fondo */
+    padding: 18px 30px; /* Relleno del boton */
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    transition: all 300ms ease 0ms;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    text-decoration: none;
+    }
+    .btn-flotante:hover {
+    background-color: var(--verde-fruver-iluminado); /* Color de fondo al pasar el cursor */
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-7px);
+    color: var(--verde-fruver-claro);
+    text-decoration: none;
+    }
+    @media only screen and (max-width: 600px) {
+    .btn-flotante {
+    font-size: 14px;
+    padding: 12px 20px;
+    bottom: 20px;
+    right: 20px;
+    }
+    }
+/* fin boton flotante */
+
+/* comienzo footer */
+#contacts {
+    background:var(--fondo);
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif; 
+
+}
+
+footer #contacts{
+    background: var(--verde-fruver);
+}
+/* lista del footer */
+
+footer #contacts ul{
+    margin-top: 30px;
+}
+
+footer #contacts ul h2{
+    color: var(--blanco);
+    font-size: 18px;    
+    font-family: 'Anek Latin', sans-serif;
+    margin-bottom: 25px;    
+}
+
+footer ul li a{
+    text-decoration: none;
+    list-style: none;
+    /* display: flex; */
+    /* width: 33%; */
+    /* color: var(--verde-fruver); */
+    color: var(--blanco);
+    font-size: 12px;    
+    font-family: 'Anek Latin', sans-serif;
+} 
+footer ul li a:hover{
+    color: var(--verde-fruver-iluminado);
+}
+
+/* tamaño de las imagenes */
+footer #contacts .iconosimg{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+
+}
+.iconosimg img{
+    width: 25px;
+    height: 25px;
+}
+footer .iconosimg a{
+    text-decoration: none;
+}
+
+#contacts ul li{
+    text-decoration: none;
+    list-style: none;
+}
+
+#contacts ul{
+    width: 33%;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+

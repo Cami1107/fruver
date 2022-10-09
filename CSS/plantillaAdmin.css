@@ -1,0 +1,23 @@
+/* Estilos de CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Crear variables de color */
+:root{
+    --fondo:rgb(251, 249, 241);
+    --blanco:#ffffff;
+    --negro:#000000;
+    --verde-fruver:#2A6049;
+    --verde-fruver-iluminado: #479E79;
+    --verde-fruver-claro: rgb(241, 251, 244);
+    --gris-letra:#444444;
+
+
+}
+/* Estilos para header */
+body{
+    background-color: var(--fondo);
+}
