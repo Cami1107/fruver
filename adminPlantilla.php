@@ -96,7 +96,7 @@
                             <td>{{ user.telefono_usuario }}</td>
                             <td>{{ user.direccion_usuario }}</td>
                             <td>{{ user.estatus }}</td>
-                            <td>{{ user.nombre_rol }}</td>
+                            <td>{{ user.rol_id }}</td>
                             <td colspan="2">
                                 <div class="d-flex">
                                     <button 
@@ -250,16 +250,16 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <label for="doc_usuario" class="form-label">Rol</label>
-                                <select name="rolUsuario" id="rolUsuario" class="form-select form-select-md mb-3" aria-label=".form-select-lg example" v-model="store.actualUser.rol_id">
+                                <select name="rolUsuario" id="rolUsuario" class="form-select form-select-md mb-3" aria-label=".form-select-lg example" v-model="store.actualUser.rol_id ">
                                     <?php
                                     require_once('conexion.php');
-                                    $sql = "SELECT * from roles;";
+                                    $sql = "SELECT * from rol;";
                                     $traerRol = $conexion->prepare($sql);
                                     $traerRol->execute();
                                     $leerRol = $traerRol->fetchAll(PDO::FETCH_ASSOC);
 
                                     foreach ($leerRol as $key => $datos) {
-                                        echo "<option value='{$datos['id_rol']}'>{$datos['nombre_rol']}</option>";
+                                        echo "<option value='{$datos['id_rol']}'>{$datos['rol_Nombre']}</option>";
                                     }
                                     ?>
                                 </select>
