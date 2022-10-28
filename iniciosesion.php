@@ -1,8 +1,16 @@
 <?php
+// metodo definido del programa que almacena datos de un usuario en memoria cache
+//localstore
 session_start();
+// $_SESSION es otro metodo de php, almacena datos
+// en datos esta toda informacion de la tabla usuario
 if ($_SESSION['login']) {
-    if ($_SESSION['datos']['id_usuario']==1) {
+    // validacion de rol administrador
+    if ($_SESSION['datos']['id_usuario']==1 || $_SESSION['datos']['rol_id']==1){
         header("Location: adminPlantilla.php");
+    // validacion tol empleado
+    }elseif($_SESSION ['datos']['rol_id']== 2){
+        header("Location: empleadoPlantilla.html");
     }else{
         header("Location: frutas.php");
     }
@@ -15,6 +23,7 @@ if ($_SESSION['login']) {
         exit;
     }
 }
+var_dump ($_SESSION);
 ?>
 
 
@@ -75,9 +84,6 @@ if ($_SESSION['login']) {
             </div>
         </nav>
 
-
-
-
     </header>
     <!-- Codigo para el main -->
     <?php
@@ -108,12 +114,12 @@ if ($_SESSION['login']) {
                     
                     $_SESSION['datos'] = $fila;
                     $_SESSION['login'] = true;
-                   /*  var_dump($_SESSION['datos']);
-                    var_dump($_SESSION['login']); */
                     if ($_SESSION['datos']['rol_id']==1) {
                         echo "
                         <script>alert('Inicio Sesion ".$_SESSION['datos']['nombre_usuario']." ".$_SESSION['datos']['apellido_usuario']."');</script>
                         <script>window.location.replace('adminPlantilla.php');</script>";
+                    }elseif($_SESSION ['datos']['rol_id']== 2){
+                        header("Location: empleadoPlantilla.html");
                     }else{
                         echo "
                         <script>alert('Inicio Sesion ".$_SESSION['datos']['nombre_usuario']." ".$_SESSION['datos']['apellido_usuario']."');</script>

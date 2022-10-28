@@ -73,6 +73,42 @@
             <div class="contForm">
                 <form action="registrar.php"method="POST">
                     <center><legend>Registro</legend></center>
+                                        <template v-for="user in store.allUsers">
+                        <tr>
+                            <td>{{ user.tipoDoc_usuario }}</td>
+                            <td>{{ user.identificacion_usuario }}</td>
+                            <td>{{ user.nombre_usuario }}</td>
+                            <td>{{ user.apellido_usuario }}</td>
+                            <td>{{ user.correo_usuario }}</td>
+                            <td>{{ user.telefono_usuario }}</td>
+                            <td>{{ user.direccion_usuario }}</td>
+                            <td>{{ user.estatus }}</td>
+                            <td>{{ user.rol_id }}</td>
+                            <td colspan="2">
+                                <div class="d-flex">
+                                    <button 
+                                        :user-id="user.id_usuario" 
+                                        type="button" 
+                                        class="btn btn-success" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#editarModal"
+                                        data-type="update"
+                                    >
+                                        <i :user-id="user.id_usuario" class="bi bi-pencil-square"></i>
+                                    </button>
+                                    <button 
+                                        :user-id="user.id_usuario" 
+                                        type="button" 
+                                        class="btn btn-danger ms-1" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#deleteModal"
+                                    >
+                                        <i :user-id="user.id_usuario" class="bi bi-trash-fill"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </template>
                     <div class="mb-3">
                         <label class="form-label">Nombres:</label>
                         <input type="text" name="nombre" class="form-control" placeholder="">
