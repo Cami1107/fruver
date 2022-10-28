@@ -1,6 +1,5 @@
 <?php
 session_start();
-var_dump ($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -25,10 +24,7 @@ var_dump ($_SESSION);
     
     <!-- cdn icons bootstrap v1.3 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-
-
 </head>
-
 <body>
     <div>
         <!-- Codigo para el header -->
@@ -43,23 +39,6 @@ var_dump ($_SESSION);
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
-                    <div class="collapse navbar-collapse collapse-fruver" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#servicios">Servicios</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#categorias">Categorias</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contacts">Perfil</a>
-                            </li>
-                        </ul>
-                    </div>
                     <a href="logOut.php">Cerrar Sesion</a>
                 </div>
             </nav>
@@ -69,6 +48,7 @@ var_dump ($_SESSION);
         <!-- Codigo para el main -->
         <main>
             <div class="container">
+                <!-- boton que llama crear nuevo usuario -->
                  <button 
                     type="button" 
                     class="btn btn-success mb-3" 
@@ -76,8 +56,9 @@ var_dump ($_SESSION);
                     data-bs-target="#editarModal"
                     data-type="create"
                 >
-                <i class="bi bi-plus-lg"></i> Crear Nuevo Usuario
+                    <i class="bi bi-plus-lg"></i> Crear Nuevo Usuario
                 </button>
+                <!-- Tabla de mostrar todo -->
                 <table id="usersTable" class="table table-hover">
                     <tr class="table-success">
                         <th>tipoDoc_usuario</th>
@@ -91,8 +72,11 @@ var_dump ($_SESSION);
                         <th>Tipo Rol</th>
                         <th colspan="2"></th>
                     </tr>
+                    <!-- template es una etiqueta de vue, que es parecido al foreach -->
                     <template v-for="user in store.allUsers">
+                    <!-- user es la variable que almacena los datos -->
                         <tr>
+                            <!-- llamar informacion usando vue -->
                             <td>{{ user.tipoDoc_usuario }}</td>
                             <td>{{ user.identificacion_usuario }}</td>
                             <td>{{ user.nombre_usuario }}</td>
@@ -104,6 +88,7 @@ var_dump ($_SESSION);
                             <td>{{ user.rol_id }}</td>
                             <td colspan="2">
                                 <div class="d-flex">
+                                    <!-- boton modal de editar -->
                                     <button 
                                         :user-id="user.id_usuario" 
                                         type="button" 
@@ -114,6 +99,7 @@ var_dump ($_SESSION);
                                     >
                                         <i :user-id="user.id_usuario" class="bi bi-pencil-square"></i>
                                     </button>
+                                    <!-- boton modal de eliminar -->
                                     <button 
                                         :user-id="user.id_usuario" 
                                         type="button" 
@@ -123,14 +109,13 @@ var_dump ($_SESSION);
                                     >
                                         <i :user-id="user.id_usuario" class="bi bi-trash-fill"></i>
                                     </button>
+
                                 </div>
                             </td>
                         </tr>
                     </template>
                 </table>
             </div>
-
-
         </main>
 
         <!-- Codigo para el Footer -->
@@ -290,6 +275,7 @@ var_dump ($_SESSION);
             </div>
         </div>
     </div>
+    <!-- fin codigo ventana emergente modal -->
     <!-- Modal ELIMINAR-->
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -320,5 +306,4 @@ var_dump ($_SESSION);
     <script src="Assets/js/components/allUsers_component.js" type="text/javascript"></script>
     <script src="Assets/js/components/user_component.js" type="text/javascript"></script>
 </body>
-
 </html>

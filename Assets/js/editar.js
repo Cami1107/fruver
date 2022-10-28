@@ -1,3 +1,4 @@
+
 let modalEditar = document.querySelector('#editarModal'); //
 let modalDelete = document.querySelector('#deleteModal');
 modalEditar.addEventListener('show.bs.modal', event => {
@@ -31,5 +32,3 @@ modalDelete.addEventListener('show.bs.modal', event => {
     let userId = event.explicitOriginalTarget.getAttribute('user-id');
     document.getElementById('delete_user_id').value = userId
 }); 
-
-  

@@ -101,9 +101,7 @@ var_dump ($_SESSION);
             $leer = $conexion->prepare($sql);
             $leer->execute();
             $fila = $leer->fetch(PDO::FETCH_ASSOC);
-
-
-
+ 
             if (!empty($fila)) {
                 //var_dump($fila);
                 $correDb = $fila['correo_usuario'];
